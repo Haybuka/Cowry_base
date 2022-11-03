@@ -1,0 +1,41 @@
+.features_container {
+  @apply md:px-[100px] md:py-[50px];
+}
+
+.features_grid{
+    @apply grid place-content-center md:grid-cols-2 lg:grid-cols-3 gap-4 my-6;
+}
+
+.features_card {
+  @apply w-[300px] py-6 shadow-md px-4 my-4 rounded-lg;
+}
+
+/* To get the correct switch, abstract the colors and bg */
+
+/* inverted state color switch*/
+.features_card_invert {
+  @apply bg-base_highlight_bg text-[#C3DBFF];
+}
+.features_card_invert .features_card_img_div {
+  @apply bg-white;
+}
+
+/* default state color switch*/
+.features_card_default {
+  @apply text-[#5C5C5C];
+}
+.features_card_default .features_card_heading {
+  @apply text-about_heading;
+}
+.features_card_default .features_card_img_div {
+  @apply bg-base_highlight_bg;
+}
+
+/* Continued styling*/
+.features_card_img_div {
+  @apply h-[60px] w-[60px] p-3 my-3 rounded-xl flex justify-center items-center;
+}
+
+.features_card_heading {
+  @apply font-semibold text-lg my-2;
+}

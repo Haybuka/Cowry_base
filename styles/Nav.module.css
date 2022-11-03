@@ -1,0 +1,23 @@
+.header_nav{
+@apply py-5 px-[20px] md:px-[100px] shadow-md w-full bg-white;
+/* @apply py-5 md:px-[100px] shadow-md fixed z-10 w-full bg-white; */
+}
+
+.header_heading{
+    @apply text-base_highlight font-bold text-4xl;
+}
+.nav{
+    @apply flex justify-between items-center;
+}
+
+.nav_item{
+    @apply hidden md:flex justify-between items-center;
+}
+
+.btn {
+   @apply px-4 py-3 rounded-full mx-6;
+}
+
+.btn_download{
+  @apply text-base_highlight bg-base_bg;
+}

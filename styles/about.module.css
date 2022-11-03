@@ -1,0 +1,45 @@
+/* .about{
+    @apply md:px-[100px];
+} */
+
+/* about section one classes */
+
+.about_one {
+  @apply md:my-[90px];
+}
+.about_one_div {
+  @apply md:px-[60px] 2xl:px-[200px] flex justify-between items-center;
+}
+.about_one_h3 {
+  @apply mb-6 leading-[60px] text-[30px] lg:text-[50px] font-semibold text-about_heading;
+}
+.about_one_p {
+  @apply text-xl leading-[27px] text-about_dark_text;
+}
+
+/* about section two classes */
+
+.about_two {
+    @apply bg-base_highlight_bg md:py-[30px]
+}
+
+.about_two_transport{
+    @apply flex border-y-[1px] border-[#81A8E7] justify-between items-start py-12;
+}
+.about_two_transport:nth-last-child(1){
+    border-bottom: 0;
+}
+
+/* common classes */
+
+.about_container {
+  @apply md:px-[100px];
+}
+
+.lead_heading {
+  @apply my-10 flex items-center text-base_highlight font-semibold;
+}
+
+.lead_heading_span {
+  @apply inline-block bg-base_bg p-5 px-6 rounded-full mr-4;
+}
