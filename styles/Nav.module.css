@@ -21,3 +21,35 @@
 .btn_download{
   @apply text-base_highlight bg-base_bg;
 }
+
+/* Drop down styles */
+.nav_drop_menu_items{
+    @apply block rounded-xl shadow-md absolute md:z-10 left-0 -translate-x-2/4 bg-white translate-y-5;
+}
+
+.nav_drop_menu_item{
+    @apply block border  py-5 px-4;
+}
+
+/* Default dropdown layout styles */
+.nav_drop_default .nav_drop_menu_item{
+    @apply border-x-0 text-black;
+}
+
+.nav_drop_default .nav_drop_menu_item:last-child,.nav_drop_default .nav_drop_menu_item:first-child{
+    border: none;
+}
+
+.nav_drop_default{
+@apply w-[300px];
+}
+
+/* Grid layout styles */
+
+.nav_drop_grid{
+    @apply w-[650px] grid grid-cols-2 place-content-center overflow-hidden;
+}
+
+.nav_drop_grid .nav_drop_menu_item{
+@apply border-t-0
+}
