@@ -6,10 +6,10 @@ const AboutOne = () => {
     <section className={`${styles.about_one} ${styles.about_container}`}>
       <LeadHead index="01" text="About us" />
     <div className={styles.about_one_div}>
-      <aside>
+      <aside className='flex justify-center'>
         <img src='/images/common/iPhone 14.svg' alt=" " className=''/>          
       </aside>
-      <article className='md:w-3/6'>
+      <article className='lg:w-3/6'>
         <h3 className={styles.about_one_h3}>
           The journey to cashless transactions. Cowry makes micro-payments easier and faster.
         </h3>

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Dropdown from "./dropdown.component";
+import NavItem from "./navitem.component";
 import styles from "../../styles/Nav.module.css";
 const Navbar = () => {
   const navigation = [
@@ -10,8 +10,7 @@ const Navbar = () => {
     },
     {
       path: "about",
-      name: "About",
-      
+      name: "About",   
     },
     {
       path: "features",
@@ -99,14 +98,7 @@ const Navbar = () => {
         </h1>
         <ul className={styles.nav_item}>
           {navigation.map((nav, id) => (
-            <li className="mx-6 flex items-center" key={id}>
-              <Link href={nav.path}>
-                {/* Name of nav item goes here, a fix for the double click bug? */}
-                <span className="inline-block mr-2">{nav.name}</span>
-              </Link>
-              {/* If drop down exists, this renders */}
-              {nav?.dropdown && <Dropdown items={nav} />}
-            </li>
+            <NavItem key={id} nav={nav}/>
           ))}
           <li className={`${styles.btn_download} ${styles.btn}`}>
             Download app

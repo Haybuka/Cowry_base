@@ -18,7 +18,7 @@ const AboutTwo = () => {
     ]
     return (
         <section className={`${styles.about_container} ${styles.about_two} `}>
-            <LeadHead index="02" text="Transport Made Seamless With Cowry" text_style="text-white text-3xl ml-3" />
+            <LeadHead index="02" text="Transport Made Seamless With Cowry" text_style="text-white text-xl my-4 md:my-0 md:text-3xl md:ml-3" />
             <p className='text-white leading-[30px]'>
                 As long as you have your smartphone or cowry card, you can never be left stranded in Lagos. Now you can reduce your rush to go out and about in the city because Cowry takes out the queue and wait period.
             </p>

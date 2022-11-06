@@ -1,5 +1,5 @@
 .header_nav{
-@apply py-5 px-[20px] md:px-[100px] shadow-md w-full bg-white;
+@apply py-5 px-[20px] md:px-[70px] shadow-md w-full bg-white;
 /* @apply py-5 md:px-[100px] shadow-md fixed z-10 w-full bg-white; */
 }
 
@@ -15,7 +15,7 @@
 }
 
 .btn {
-   @apply px-4 py-3 rounded-full mx-6;
+   @apply px-4 py-3 rounded-full mx-6 mr-0;
 }
 
 .btn_download{

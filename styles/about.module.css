@@ -8,10 +8,10 @@
   @apply md:my-[90px];
 }
 .about_one_div {
-  @apply md:px-[60px] 2xl:px-[200px] flex justify-between items-center;
+  @apply block md:px-[60px] 2xl:px-[200px] lg:flex justify-between items-center;
 }
 .about_one_h3 {
-  @apply mb-6 leading-[60px] text-[30px] lg:text-[50px] font-semibold text-about_heading;
+  @apply mb-6 py-3 lg:py-0 leading-[40px] lg:leading-[60px] text-[30px] lg:text-[50px] font-semibold text-about_heading;
 }
 .about_one_p {
   @apply text-xl leading-[27px] text-about_dark_text;
@@ -24,7 +24,7 @@
 }
 
 .about_two_transport{
-    @apply flex border-y-[1px] border-[#81A8E7] justify-between items-start py-12;
+    @apply block lg:flex border-y-[1px] border-[#81A8E7] justify-between items-start py-12
 }
 .about_two_transport:nth-last-child(1){
     border-bottom: 0;
@@ -33,11 +33,11 @@
 /* common classes */
 
 .about_container {
-  @apply md:px-[100px];
+  @apply px-[15px] py-[10px] md:px-[100px];
 }
 
 .lead_heading {
-  @apply my-10 flex items-center text-base_highlight font-semibold;
+  @apply my-10 block md:flex items-center text-base_highlight font-semibold;
 }
 
 .lead_heading_span {

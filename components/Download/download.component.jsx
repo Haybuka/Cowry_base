@@ -6,13 +6,18 @@ const Download = () => {
         <section className={styles.download}>
             <article className={styles.download_article}>
                 <h3 className={styles.download_heading}>Download Cowry app to get started.</h3>
-                <div className='flex items-center'>
+                <div className='flex-col flex items-center md:flex-row'>
                     <Link href='/'>
+                        <div className='w-[250px] md:w-auto my-3 md:my-0'>
                         <img src='./images/common/appstore_btn.svg' alt='download' className='w-full'/>
+                        </div>
                     </Link>
                     <span className='inline-block mr-[32px]'></span>
                     <Link href='/'>
+                        <div className='w-[250px] md:w-auto my-3 md:my-0'>
                         <img src='./images/common/playstore_btn.svg' alt='download' className='w-full'/>
+
+                        </div>
                     </Link>
                 </div>
             </article>
