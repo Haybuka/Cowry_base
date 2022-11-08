@@ -1,0 +1,8 @@
+.subscribe_blog{
+    @apply  bg-base_highlight_bg 2xl:w-[420px] rounded-3xl px-8 py-4;
+    background-image: url('/images/blog/dots.svg');
+    background-position:  5% 20%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+
