@@ -3,7 +3,6 @@ import { Tab } from "@headlessui/react";
 import blogpostData from "./fakepost";
 import Post from "./post.component";
 
-console.log(blogpostData);
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -86,9 +85,10 @@ export default function BlogTab() {
         </Tab.List>
         <Tab.Panels className="mt-2">
           {Object.values(categories).map((posts, idx) => (
+         <>
             <Tab.Panel
               key={idx}
-              className={classNames("rounded-xl bg-white p-3", "")}
+              className={classNames("rounded-xl bg-white md:p-3 my-8", "")}
             >
               <ul>
                 {posts.map((post) => (
@@ -96,7 +96,10 @@ export default function BlogTab() {
                 ))}
               </ul>
             </Tab.Panel>
+         </>
           ))}
+        
+
         </Tab.Panels>
       </Tab.Group>
     </div>

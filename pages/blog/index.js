@@ -10,10 +10,10 @@ const Blog = () => {
   return (
     <>
       <Jumbotron text="Blog" />
-      <section className='grid grid-cols-2 px-[100px] 2xl:px-[200px] my-16'>
+      <section className='grid grid-cols-1 px-3 xl:grid-cols-2 md:px-[80px] 2xl:px-[200px] my-16'>
         <BlogTab />
 
-        <aside className='subscribe_blog px-[80px] '>
+        <aside className='w-[350px] mx-auto md:w-auto lg:pl-[80px] xl:px-[80px] '>
           <Subscribe />
         </aside>
       </section>

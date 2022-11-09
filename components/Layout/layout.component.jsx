@@ -1,16 +1,22 @@
-import React from 'react'
-import Navbar from '../Navbar/navbar.component'
-import Download from '../Download/download.component'
-import Footer from '../Footer/footer.component'
+import React, { useContext } from "react";
+import Navbar from "../Navbar/navbar.component";
+import Download from "../Download/download.component";
+import Footer from "../Footer/footer.component";
+import { NavContext } from "../../context/navcontext";
 const Layout = ({ children }) => {
-  return (
-    <div className=''>
-      <Navbar />
-      {children}
-      <Download />
-      <Footer />
-    </div>
-  )
-}
+  const { view, handleViewClick } = useContext(NavContext);
 
-export default Layout
+  return (
+    <div className="">
+      <Navbar />
+      <div className={view && "hidden"}>
+        {children}
+
+        <Download />
+        <Footer />
+      </div>
+    </div>
+  );
+};
+
+export default Layout;

@@ -1,11 +1,11 @@
 .footer{
-    @apply px-[20px] md:px-[100px] py-8;
+    @apply px-[20px] md:px-[100px] py-8 ;
 }
 .footer_head{
     @apply block  md:flex justify-between items-start py-4 my-4;
 }
 .footer_nav_item{
-    @apply text-[#474747] my-3;
+    @apply text-[#474747] my-3 font-[15px];
 }
 .footer_heading{
     @apply text-[#0E60E2] font-bold text-4xl my-8 md:my-0;

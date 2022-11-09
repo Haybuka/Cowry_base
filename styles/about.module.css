@@ -1,20 +1,20 @@
 /* .about{
     @apply md:px-[100px];
 } */
-
+ 
 /* about section one classes */
 
 .about_one {
-  @apply md:my-[90px];
+  @apply md:my-[90px] ;
 }
 .about_one_div {
   @apply block md:px-[60px] 2xl:px-[200px] lg:flex justify-between items-center;
 }
 .about_one_h3 {
-  @apply mb-6 py-3 lg:py-0 leading-[40px] lg:leading-[60px] text-[30px] lg:text-[50px] font-semibold text-about_heading;
+  @apply mb-4 py-2 lg:py-0 leading-[33px] lg:leading-[60px] text-[30px] lg:text-[50px] font-semibold text-about_heading;
 }
 .about_one_p {
-  @apply text-xl leading-[27px] text-about_dark_text;
+  @apply text-xl leading-[25px] text-about_dark_text;
 }
 
 /* about section two classes */
@@ -33,7 +33,7 @@
 /* common classes */
 
 .about_container {
-  @apply px-[15px] py-[10px] md:px-[100px];
+  @apply px-[15px] py-[30px] md:px-[100px];
 }
 
 .lead_heading {

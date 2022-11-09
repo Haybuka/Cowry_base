@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
 import { Menu } from "@headlessui/react";
 import DropdownLayout from "./droplayout.component";
-const Dropdown = ({ items }) => {
+import { NavContext } from "../../context/navcontext";
+const Dropdown = ({ items, dropClass = "relative ml-2" }) => {
+  const { view } = useContext(NavContext);
   const { dropdown, path, layout = "default", name } = items;
   const [open, setOpen] = React.useState(false);
+  let mode = view ? 'mobile' : 'desktop'
+
   const handleOpen = () => {
     setOpen(!open);
   };
   return (
-    <Menu className="relative ml-2" as="aside">
-      {({ open:open }) => (
+    <Menu className={dropClass} as="aside">
+      {({ open: open }) => (
         <>
           <Menu.Button as="div" className="flex items-center">
             <button className="mr-2">{name}</button>

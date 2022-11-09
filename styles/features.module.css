@@ -1,5 +1,5 @@
 .features_container {
-  @apply md:px-[100px] md:py-[50px];
+  @apply px-4 md:px-0 md:px-[100px] md:py-[50px];
 }
 
 .features_grid{
@@ -7,7 +7,7 @@
 }
 
 .features_card {
-  @apply w-[300px] py-6 shadow-md px-4 my-4 rounded-lg;
+  @apply  py-6 shadow-md px-4 my-4 rounded-lg;
 }
 
 /* To get the correct switch, abstract the colors and bg */

@@ -3,11 +3,11 @@ import React from "react";
 const Post = (post) => {
   const {title,body,img,date} = post.post
   return (
-    <article className="flex mb-5">
-      <div className="w-[580px] 2xl:w-[500px]">
+    <article className="block md:flex my-10 md:my-0 md:mb-5 ">
+      <div className="md:w-[580px] 2xl:w-[500px]">
         <img alt="" src={img} className="w-full" />
       </div>
-      <aside className="ml-5 flex justify-between flex-col">
+      <aside className="my-3 md:ml-5 flex justify-between flex-col">
         <div className="mb-2">
           <h3 className="font-semibold text-lg">
             {title}

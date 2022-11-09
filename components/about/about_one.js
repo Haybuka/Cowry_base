@@ -20,6 +20,6 @@ const AboutOne = () => {
     </div>
   </section>
   )
-}
+} 
 
 export default AboutOne
