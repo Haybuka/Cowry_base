@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from '../components/index/banner.component'
+import Stat from '../components/index/stat.component'
+import Partners from '../components/index/partners.component'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -13,6 +15,8 @@ export default function Home() {
       </Head>
       <main className=''>
          <Banner />
+         <Stat />
+         <Partners />
       </main>
     </>
   )
