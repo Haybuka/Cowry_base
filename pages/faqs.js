@@ -1,29 +1,83 @@
 import React from 'react'
 import Head from 'next/head'
 import Jumbotron from '../components/jumbotron'
-import FaqClosure from '../components/faqs/disclosure.component'
+// import FaqClosure from '../components/faqs/disclosure.component'
+import FaqIndex from '../components/faqs/faq.component'
 
 
 const Faqs = () => {
 
   const faqsPost = [
     {
-      title: 'How do I top up my card?',
-      body: 'Approach agents at any Top-up point across various terminals.Give them your Cowry card for top-up and make payment.Your card will be topped for you and you can use it for bus payments.',
+      labels: 'General questions',
+      post: [
+        {
+
+          title: 'How do I top up my card?',
+          body: 'Approach agents at any Top-up point across various terminals.Give them your Cowry card for top-up and make payment.Your card will be topped for you and you can use it for bus payments.',
+        },
+        {
+          title: 'Do I always need to tap out when I reach my destination?'
+        },
+        {
+          title: 'Does the Cowry card expire?'
+        },
+        {
+          title: 'Can two people use one card for a trip?'
+        }, {
+          title: 'How do I get a replacement if I misplace my card?'
+        }, {
+          title: 'Can I use my Cowry card to pay for shopping items?'
+        }
+      ]
     },
     {
-      title: 'Do I always need to tap out when I reach my destination?'
+      labels: 'Card related issues',
+      post: [
+        {
+
+          title: 'How do I top up my card?',
+          body: 'Approach agents at any Top-up point across various terminals.Give them your Cowry card for top-up and make payment.Your card will be topped for you and you can use it for bus payments.',
+        },
+        {
+          title: 'Do I always need to tap out when I reach my destination?'
+        },
+        {
+          title: 'Does the Cowry card expire?'
+        },
+        {
+          title: 'Can two people use one card for a trip?'
+        }, {
+          title: 'How do I get a replacement if I misplace my card?'
+        }, {
+          title: 'Can I use my Cowry card to pay for shopping items?'
+        }
+      ]
     },
     {
-      title: 'Does the Cowry card expire?'
-    },
-    {
-      title: 'Can two people use one card for a trip?'
-    }, {
-      title: 'How do I get a replacement if I misplace my card?'
-    }, {
-      title: 'Can I use my Cowry card to pay for shopping items?'
+      labels: 'App related issues',
+      post: [
+        {
+
+          title: 'How do I top up my card?',
+          body: 'Approach agents at any Top-up point across various terminals.Give them your Cowry card for top-up and make payment.Your card will be topped for you and you can use it for bus payments.',
+        },
+        {
+          title: 'Do I always need to tap out when I reach my destination?'
+        },
+        {
+          title: 'Does the Cowry card expire?'
+        },
+        {
+          title: 'Can two people use one card for a trip?'
+        }, {
+          title: 'How do I get a replacement if I misplace my card?'
+        }, {
+          title: 'Can I use my Cowry card to pay for shopping items?'
+        }
+      ]
     }
+
   ]
 
   return (
@@ -36,11 +90,12 @@ const Faqs = () => {
       <main>
         <Jumbotron text="FAQs" />
         <section className='my-6'>
-          {faqsPost.map((post, id) => (
-            <FaqClosure key={id} faqs={post} />
-          ))}
+
+          {/* {faqsPost.map((post,id) => ( */}
+            <FaqIndex posts={faqsPost}/>
+          {/* ))} */}
+
         </section>
-        <FaqClosure />
       </main>
     </>
   )

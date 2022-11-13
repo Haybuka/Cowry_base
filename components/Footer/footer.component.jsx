@@ -33,7 +33,7 @@ const Footer = () => {
         <Section text="Contact" items={contact} />
       </div>
       <aside className={styles.footer_links}>
-        <p className="flex text-[#616161] text-lg">
+        <p className="flex text-[#616161] text-sm md:text-lg">
           <span> &copy;</span>
           <span className="inline-block mx-2"> 2022</span>
           <span> Cowry</span>
