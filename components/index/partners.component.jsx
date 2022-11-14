@@ -11,13 +11,13 @@ const Partners = () => {
     "./images/index/partners/sokoto.svg",
   ];
   return (
-    <section className="hidden md:block py-[40px] px-[20px] md:px-[100px] md:py-[50px] overflow-x-scroll lg:overflow-auto">
+    <section className="hidden md:block py-[40px] md:py-[50px] overflow-x-scroll lg:overflow-auto">
       <h3 className="text-xl md:text-3xl text-center md:text-left">
-        Our Partners
+        Our partners
       </h3>
       <aside className="my-[20px] md:my-0 flex items-center justify-between ">
         {partnerImg.map((img, id) => (
-          <div className=" w-[150px]" key={id}>
+          <div className=" w-[120px]" key={id}>
             <img src={img} alt="" className="w-full h-full" />
           </div>
         ))}

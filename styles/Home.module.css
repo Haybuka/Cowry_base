@@ -1,0 +1,19 @@
+.tab_group{
+@apply grid grid-cols-5  place-content-center;
+}
+
+.tab_list{
+    @apply flex space-x-1 rounded-xl bg-transparent p-1 flex-col col-span-2;
+}
+
+.tab_panel{
+    @apply ml-[100px] col-span-3;
+}
+
+.disclosure_button{
+    @apply flex border w-full justify-between items-center rounded-lg px-4 py-2 text-left text-sm font-medium text-[#011B44];
+}
+
+.disclosure_panel{
+    @apply px-4 pt-4 pb-2 text-sm text-gray-500;
+}

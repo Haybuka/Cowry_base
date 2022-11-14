@@ -3,8 +3,8 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 py-10 md:py-0">
-      <article className="flex justify-center items-center p-[20px] md:p-[80px] w-full">
+    <section className="grid grid-cols-1 lg:grid-cols-2 md:py-0">
+      <article className="flex justify-center items-center py-10 md:py-0 p-[20px] md:p-[80px] w-full">
         <div className=" md:w-[500px] text-center lg:text-left">
           <h3 className="text-3xl md:text-4xl font-semibold">
             Make micro-payments easily and faster

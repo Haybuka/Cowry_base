@@ -24,7 +24,7 @@ const Stat = () => {
         }
     ]
   return (
-    <ul className="px-[100px] py-[30px] bg-[#F0F6FF] flex justify-between items-center flex-col md:flex-row">
+    <ul className="px-[20px] lg:px-[100px] py-[30px] bg-[#F0F6FF] flex justify-between items-center flex-col md:flex-row">
       {statItems.map((item,id) => (
         <StatFigure key={id} item={item}/>
       ))}
