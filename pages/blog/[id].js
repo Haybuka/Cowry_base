@@ -26,7 +26,7 @@ const BlogItem = () => {
                 <img src="/images/blog/blogitem.svg" alt=" " />
             </aside>
             <p className='my-8'>
-                When you think about transportation payment in Lagos state I'm sure The Cowry Card takes first place in your mind.  If it doesn't, I'm not sure you're living in Lagos, Nigeria
+                When you think about transportation payment in Lagos state Im sure The Cowry Card takes first place in your mind.  If it doesnt, Im not sure youre living in Lagos, Nigeria
             </p>
             <p className='my-8'>
                 In any case, the Cowry card was introduced in 2020 in the aftermath of #Covid-19 when everyone needed a mode of payment that reduces handling of cash and also aids contact tracing.
@@ -36,10 +36,10 @@ const BlogItem = () => {
 
             <p className='my-8'> What is special about the Cowry Card?
 
-                Apart from being a mode of payment that promotes a cashless economy, the cowry card works OFFLINE. That's right, you don't need an internet connection to use your cowry card. And that is the differentiating factor between the Cowry Card and the Cowry App
+                Apart from being a mode of payment that promotes a cashless economy, the cowry card works OFFLINE. Thats right, you dont need an internet connection to use your cowry card. And that is the differentiating factor between the Cowry Card and the Cowry App
             </p>
             <p className='my-8'>
-                Therefore, in a situation whereby you aren't having strong network connection, your cowry card is the best option.
+                Therefore, in a situation whereby you arent having strong network connection, your cowry card is the best option.
             </p>
         </section>
     )

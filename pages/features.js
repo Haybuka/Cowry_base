@@ -16,7 +16,7 @@ const Features = () => {
       <main className={styles.features_container}>
         <section className={styles.features_grid}>
           {featureList.map((feature, id) => (
-            <Card key={id} feature={feature} />
+            <Card key={id} feature={feature} id={id} />
           ))}
 
         </section>

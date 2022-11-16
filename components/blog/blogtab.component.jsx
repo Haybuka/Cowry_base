@@ -67,9 +67,9 @@ export default function BlogTab() {
     <div className="w-full px-2 ">
       <Tab.Group>
         <Tab.List className="flex space-x-1 rounded-xl ">
-          {Object.keys(categories).map((category) => (
+          {Object.keys(categories).map((category,id) => (
             <Tab
-              key={category}
+              key={id}
               className={({ selected }) =>
                 classNames(
                   "w-full py-2.5 text-sm font-medium leading-5 text-blue-700",
@@ -92,8 +92,8 @@ export default function BlogTab() {
               className={classNames("rounded-xl bg-white md:p-3 my-8", "")}
             >
               <ul>
-                {posts.map((post) => (
-                  <Post key={post.id} post={post} />
+                {posts.map((post,id) => (
+                  <Post key={id} post={post} />
                 ))}
               </ul>
             </Tab.Panel>

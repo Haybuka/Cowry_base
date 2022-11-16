@@ -52,9 +52,9 @@ const Services = () => {
     <div className="w-full px-2 py-16 sm:px-0">
       <Tab.Group className={styles.services_tab} as="section">
         <Tab.List className={styles.services_tablist}>
-          {categories.map((category) => (
+          {categories.map((category,id) => (
             <Tab
-              key={category}
+              key={id}
               as="p"
               className={({ selected }) =>
                 classNames(

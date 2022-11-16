@@ -8,7 +8,7 @@ const Subscribe = () => {
       </h4>
       <form>
         <label className="rounded-lg bg-[#0B46A5] text-white py-3 flex items-center">
-          <div className="block md:mx-4">
+          <div className="block mx-2 md:mx-4">
              <span className="block md:w-6 md:h-6 mr-4">
             <img alt=" " src="./images/common/message.png" className="w-full"/>
 
@@ -17,7 +17,7 @@ const Subscribe = () => {
           <input
             type="email"
             name="email"
-            placeHolder="Enter your email"
+            placeholder="Enter your email"
             className="bg-transparent text-white outline-none overflow-hidden w-full px-2"
           />
         </label>

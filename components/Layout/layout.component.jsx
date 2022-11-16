@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <div className="">
       <Navbar />
-      <div className={view && "hidden"}>
+      <div className={view ? "hidden" : undefined}>
         {children}
 
         <Download />

@@ -7,10 +7,10 @@ import styles from "../../styles/Nav.module.css";
 import { NavContext } from "../../context/navcontext";
 const Navbar = () => {
   const { view, handleViewClick } = useContext(NavContext);
-  // let mode = view ? "mobile" : "desktop";
+
   return (
-    <header className={`${styles.header_nav}`}>
-      <nav className={`${styles.nav}`}>
+    <header className={styles.header_nav}>
+      <nav className={styles.nav}>
         <h1 className={styles.header_heading}>
           <Link href="/">
             <svg
@@ -31,8 +31,13 @@ const Navbar = () => {
           {navigation.map((nav, id) => (
             <NavItem key={id} nav={nav} />
           ))}
-          <li className={`${styles.btn_download} ${styles.btn}`}>
-            Download app
+          <li
+            className={`${styles.btn_download} ${styles.btn} cursor-pointer`}
+            onClick={() => alert(navigator.oscpu)}
+          >
+            <Link target="_blank" href="">
+              Download app
+            </Link>
           </li>
         </ul>
         <div className={styles.harmburger} onClick={handleViewClick}>

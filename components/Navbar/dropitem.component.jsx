@@ -7,7 +7,7 @@ const DropItem = ({item}) => {
     <Link href={`/services#${id}`}>
     <div className='flex items-center' >
         <span className='inline-block mr-3 w-[40px] h-[40px]'>
-            <img src={img} classname="w-full"/>
+            <img src={img} className="w-full"/>
         </span>
         <span className='font-semibold'>{title} </span>
     </div>

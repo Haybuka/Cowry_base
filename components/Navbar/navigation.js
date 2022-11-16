@@ -4,16 +4,16 @@ const navigation = [
       name: "Home",
     },
     {
-      path: "about",
+      path: "/about",
       name: "About",   
     },
     {
-      path: "features",
+      path: "/features",
       name: "Features",
     
     },
     {
-      path: "services",
+      path: "/services",
       name: "Services",
       layout : 'grid',
       dropdown: [
@@ -59,12 +59,12 @@ const navigation = [
       ]
     },
     {
-      path: "blog",
+      path: "/blog",
       name: "Blog",
       // dropdown: []
     },
     {
-      path: "faqs",
+      path: "/faqs",
       name: "FAQs",
       // dropdown: []
     },
