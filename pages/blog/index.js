@@ -13,7 +13,8 @@ const Blog = () => {
       <section className='grid grid-cols-1 px-3 xl:grid-cols-2 md:px-[80px] 2xl:px-[200px] my-16'>
         <BlogTab />
 
-        <aside className='w-[350px] mx-auto md:w-auto lg:pl-[80px] xl:px-[80px] '>
+        {/* <aside className='w-auto mx-auto lg:pl-[80px] xl:px-[80px] '> */}
+        <aside className=' xl:px-[80px]'>
           <Subscribe />
         </aside>
       </section>

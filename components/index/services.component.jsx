@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
-
+import styles from '../../styles/Home.module.css'
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -50,22 +50,22 @@ let categories = [
 const Services = () => {
   return (
     <div className="w-full px-2 py-16 sm:px-0">
-      <Tab.Group>
-        <Tab.List className="flex justify-between items-center border-b-[0.5px] border-gray-400">
+      <Tab.Group className={styles.services_tab} as="section">
+        <Tab.List className={styles.services_tablist}>
           {categories.map((category) => (
             <Tab
               key={category}
               as="p"
               className={({ selected }) =>
                 classNames(
-                  "text-sm font-medium leading-5 text-blue-700 py-2 tracking-wider",
+                  "text-md font-medium leading-5 text-blue-700 py-5 md:py-4 tracking-wider w-[200px] mx-4 flex items-center justify-center",
                   selected
                     ? "border-b-2 border-base_highlight outline-none"
                     : "text-black hover:bg-white/[0.12] hover:text-gray-400 hover:cursor-pointer"
                 )
               }
             >
-              {category.name}
+              <span className="w-[200px] md:w-[200px] lg:w-[250px] block text-center">{category.name}</span>
             </Tab>
           ))}
         </Tab.List>
@@ -90,12 +90,12 @@ const ServiceCard = ({data}) => {
     
     return (
         <article className="grid grid-cols-1 md:grid-cols-4 place-items-center py-10">
-            <div className="col-span-2">
-                <img alt="" src={data?.src}/>
+            <div className="col-span-2 w-[350px] h-[350px] md:w-auto md:h-auto">
+                <img alt="" src={data?.src} className="w-full h-full"/>
             </div>
             <aside className="col-span-2 2xl:col-span-1 mt-10 md:my-0">
-                <p className="text-2xl md:text-3xl 2xl:text-4xl mb-4 text-[#011B44]">{data?.title}</p>
-               <p className="text-[#6A6A6A] text-md md:text-lg"> {data?.body}</p>
+                <p className="text-xl md:text-2xl 2xl:text-4xl mb-4 text-[#011B44]">{data?.title}</p>
+               <p className="text-[#6A6A6A] text-md md:text-md"> {data?.body}</p>
             </aside>
         </article>
     )

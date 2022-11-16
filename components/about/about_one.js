@@ -6,8 +6,8 @@ const AboutOne = () => {
     <section className={`${styles.about_one} ${styles.about_container}`}>
       <LeadHead index="01" text="About us" />
     <div className={styles.about_one_div}>
-      <aside className='flex justify-center'>
-        <img src='/images/common/iPhone 14.svg' alt=" " className=''/>          
+      <aside className='flex justify-center w-[250px] md:w-auto mx-auto'>
+        <img src='/images/common/iPhone 14.svg' alt=" " className='h-full w-full'/>          
       </aside>
       <article className='lg:w-3/6'>
         <h3 className={styles.about_one_h3}>

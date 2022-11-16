@@ -18,12 +18,12 @@ const Subscribe = () => {
             type="email"
             name="email"
             placeHolder="Enter your email"
-            className="bg-transparent text-white outline-none"
+            className="bg-transparent text-white outline-none overflow-hidden w-full px-2"
           />
         </label>
         <button className="block py-3 rounded-lg bg-white my-4 mb-[50px] w-full text-base_highlight">
           Subscribe
-        </button>
+        </button> 
       </form>
     </section>
   );

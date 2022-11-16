@@ -1,0 +1,25 @@
+.tab_group {
+  @apply lg:flex justify-between md:px-[30px] lg:px-[100px] 2xl:px-[250px];
+}
+
+.tab_list {
+  @apply flex justify-between lg:flex-col lg:border-r-[1px] lg:h-[300px] lg:w-[300px] px-2 lg:px-0 overflow-x-scroll md:overflow-x-auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.tab_list::-webkit-scrollbar {
+    display: none;
+  }
+
+.tab_panel {
+  @apply px-[10px] row-auto lg:w-[700px];
+}
+
+.disclosure_button {
+  @apply flex w-full justify-between items-center rounded-lg px-4 py-2 text-left text-sm font-medium text-base_highlight;
+}
+
+.disclosure_panel {
+  @apply px-4 pt-4 pb-2 text-sm text-gray-500;
+}

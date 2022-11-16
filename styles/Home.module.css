@@ -17,3 +17,20 @@
 .disclosure_panel{
     @apply px-4 pt-4 pb-2 text-sm text-gray-500;
 }
+
+/* services */
+.services_tab{
+    @apply overflow-hidden;
+}
+
+.services_tablist{
+    @apply flex mx-4 justify-between items-center border-b-[0.5px] border-gray-400 lg:w-auto overflow-x-scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.services_tablist::-webkit-scrollbar {
+    display: none;
+  }

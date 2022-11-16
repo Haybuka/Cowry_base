@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Tab, Disclosure } from "@headlessui/react";
 import Rating from "./rating.component";
-import styles from '../../styles/Home.module.css'
+import styles from "../../styles/Home.module.css";
 let categories = [
   {
     id: 1,
@@ -47,10 +47,7 @@ export default function IndexTab() {
 function CowryTab() {
   return (
     <div className="w-full py-16 sm:px-0 hidden lg:block">
-      <Tab.Group
-        className={styles.tab_group}
-        as="section"
-      >
+      <Tab.Group className={styles.tab_group} as="section">
         <Tab.List className={styles.tab_list}>
           {categories.map((category) => (
             <Tab
@@ -105,7 +102,7 @@ const CowryDisclosure = () => {
             {({ open }) => (
               <>
                 <Disclosure.Button className={styles.disclosure_button}>
-                  <div className="flex items-center">
+                  <div className="flex items-center py-3">
                     <span className="inline-block w-[40px] h-[40px] mr-4">
                       <img
                         src="./images/index/accordion/blueprofile.svg"
@@ -119,10 +116,18 @@ const CowryDisclosure = () => {
                     </section>
                   </div>
                   <div className="h-[15px] w-[15px]">
-                    <img
-                      src="./images/common/arrow.svg"
-                      className="w-full h-full"
-                    />
+                    {open && (
+                      <img
+                        src="./images/common/arrowup.svg"
+                        className="w-full h-full"
+                      />
+                    )}
+                    {!open && (
+                      <img
+                        src="./images/common/arrow.svg"
+                        className="w-full h-full"
+                      />
+                    )}
                   </div>
                 </Disclosure.Button>
                 <Disclosure.Panel className={styles.disclosure_panel}>

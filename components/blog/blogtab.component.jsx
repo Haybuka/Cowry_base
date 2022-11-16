@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import blogpostData from "./fakepost";
 import Post from "./post.component";
