@@ -2,49 +2,33 @@ import { useState } from "react";
 import { Tab, Disclosure } from "@headlessui/react";
 import Rating from "./rating.component";
 import styles from "../../styles/Home.module.css";
-let categories = [
-  {
-    id: 1,
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique dapibus adipiscing pulvinar ante aliquam tristique interdum cum dui. Sapien platea elit nec viverra nec sed felis. Sollicitudin vitae id enim in scelerisque. Maecenas velit id urna, accumsan posuere non egestas.",
-    date: "5h ago",
-    starCount: 4,
-    shareCount: 2,
-    name: "Adedoyin Precious",
-  },
-  {
-    id: 2,
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique dapibus adipiscing pulvinar ante aliquam tristique interdum cum dui. Sapien platea elit nec viverra nec sed felis. Sollicitudin vitae id enim in scelerisque. Maecenas velit id urna, accumsan posuere non egestas.",
-    date: "Jan 7",
-    starCount: 29,
-    shareCount: 16,
-    name: "Precious Veronica",
-  },
-  {
-    id: 3,
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique dapibus adipiscing pulvinar ante aliquam tristique interdum cum dui. Sapien platea elit nec viverra nec sed felis. Sollicitudin vitae id enim in scelerisque. Maecenas velit id urna, accumsan posuere non egestas.",
-    date: "2d ago",
-    starCount: 3,
-    shareCount: 5,
-    name: "Elesin oba",
-  },
-];
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function IndexTab() {
+export default function IndexTab({ testimony }) {
+  // console.log(testimony);
+  const testimonies = testimony.map((testimony, id) => ({
+    ...testimony?.attributes,
+    starCount: Math.max(Math.floor(Math.random() * 5) + 1, 3),
+    shareCount: Math.max(Math.floor(Math.random() * 5) + 1, 3),
+    id,
+  }));
+
+  console.log(testimonies);
   return (
     <section className=" py-6 md:py-10">
       <h2 className="text-center md:text-left text-xl md:text-2xl lg:text-4xl">
         What people are saying about Cowry
       </h2>
-      <CowryTab />
-      <CowryDisclosure />
+      <CowryTab categories={testimonies} />
+      <CowryDisclosure categories={testimonies} />
     </section>
   );
 }
 
-function CowryTab() {
+function CowryTab({ categories }) {
   return (
     <div className="w-full py-16 sm:px-0 hidden lg:block">
       <Tab.Group className={styles.tab_group} as="section">
@@ -63,7 +47,7 @@ function CowryTab() {
               }
             >
               <img src="./images/index/accordion/profile.svg" alt="" />
-              <span className="ml-6">{category.name}</span>
+              <span className="ml-6">{category.username}</span>
             </Tab>
           ))}
         </Tab.List>
@@ -82,7 +66,7 @@ function CowryTab() {
               >
                 <Rating count={post.starCount} />
                 <h3 className="text-md font-medium leading-8 text-gray-600 mt-4">
-                  {post.body}
+                  {post.message}
                 </h3>
               </section>
             </Tab.Panel>
@@ -93,7 +77,7 @@ function CowryTab() {
   );
 }
 
-const CowryDisclosure = () => {
+const CowryDisclosure = ({ categories }) => {
   return (
     <div className="w-full py-4 block lg:hidden">
       <div className="mx-auto w-full rounded-md bg-white p-2">
@@ -111,7 +95,7 @@ const CowryDisclosure = () => {
                       />
                     </span>
                     <section>
-                      <h3>{category.name}</h3>
+                      <h3>{category.username}</h3>
                       <Rating count={category.starCount} sizing="w-4 h-4" />
                     </section>
                   </div>
@@ -131,7 +115,7 @@ const CowryDisclosure = () => {
                   </div>
                 </Disclosure.Button>
                 <Disclosure.Panel className={styles.disclosure_panel}>
-                  {category.body}
+                  {category.message}
                 </Disclosure.Panel>
               </>
             )}
