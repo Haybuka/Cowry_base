@@ -18,7 +18,6 @@ export const getStaticProps = async () => {
     }
   );
   const data = await request.json();
-
   return {
     props: {
       testimony: data.data,

@@ -16,7 +16,6 @@ export default function IndexTab({ testimony }) {
     id,
   }));
 
-  console.log(testimonies);
   return (
     <section className=" py-6 md:py-10">
       <h2 className="text-center md:text-left text-xl md:text-2xl lg:text-4xl">
