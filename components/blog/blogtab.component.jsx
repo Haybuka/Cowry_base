@@ -4,70 +4,18 @@ import { Tab } from "@headlessui/react";
 import blogpostData from "./fakepost";
 import Post from "./post.component";
 
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function BlogTab() {
-  let [categories] = useState({
-    All: [
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan sagittis a diam cras gravida. Adipiscing eget cursus amet velit.",
-        date: "DECEMBER 13, 2021",
-        img: "./images/blog/Rectangle 688.svg",
-        id: 1,
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan sagittis a diam cras gravida. Adipiscing eget cursus amet velit.",
-        date: "DECEMBER 13, 2021",
-        img: "./images/blog/Rectangle 698.svg",
-        id: 2,
-      },
-    ],
-    Business: [
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan sagittis a diam cras gravida. Adipiscing eget cursus amet velit.",
-        date: "DECEMBER 13, 2021",
-        img: "./images/blog/Rectangle 699.svg",
-        id: 3,
-      },
-    ],
-    Products: [
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan sagittis a diam cras gravida. Adipiscing eget cursus amet velit.",
-        date: "DECEMBER 13, 2021",
-        img: "./images/blog/Rectangle 698.svg",
-        id: 2,
-      },
-    ],
-    Startup: [
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan sagittis a diam cras gravida. Adipiscing eget cursus amet velit.",
-        date: "DECEMBER 13, 2021",
-        img: "./images/blog/Rectangle 698.svg",
-        id: 2,
-      },
-      {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan sagittis a diam cras gravida. Adipiscing eget cursus amet velit.",
-        date: "DECEMBER 13, 2021",
-        img: "./images/blog/Rectangle 699.svg",
-        id: 3,
-      },
-    ],
-  });
-
+export default function BlogTab({ categoriesTab, allBlogs }) {
+  let [blogs] = useState(allBlogs);
   return (
     <div className="w-full px-2 ">
       <Tab.Group>
         <Tab.List className="flex space-x-1 rounded-xl ">
-          {Object.keys(categories).map((category,id) => (
+          {/* {Object.keys(categories).map((category,id) => ( */}
+          {blogs?.map((blog, id) => (
             <Tab
               key={id}
               className={({ selected }) =>
@@ -80,29 +28,80 @@ export default function BlogTab() {
                 )
               }
             >
-              {category}
+              {blog.name}
             </Tab>
           ))}
         </Tab.List>
         <Tab.Panels className="mt-2">
-          {Object.values(categories).map((posts, idx) => (
-         <>
-            <Tab.Panel
-              key={idx}
-              className={classNames("rounded-xl bg-white md:p-3 my-8", "")}
-            >
-              <ul>
-                {posts.map((post,id) => (
-                  <Post key={id} post={post} />
-                ))}
-              </ul>
-            </Tab.Panel>
-         </>
+          {blogs?.map((posts, idx) => (
+            <>
+              <Tab.Panel
+                key={idx}
+                className={classNames("rounded-xl bg-white md:p-3 my-8", "")}
+              >
+                <ul>
+                  {posts.value?.map((post, id) => (
+                    <Post key={id} post={post} />
+                  ))}
+                </ul>
+              </Tab.Panel>
+            </>
           ))}
-        
-
         </Tab.Panels>
       </Tab.Group>
     </div>
   );
 }
+
+// let [categories] = useState({
+//   All: [
+//     {
+//       title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+//       body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan sagittis a diam cras gravida. Adipiscing eget cursus amet velit.",
+//       date: "DECEMBER 13, 2021",
+//       img: "./images/blog/Rectangle 688.svg",
+//       id: 1,
+//     },
+//     {
+//       title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+//       body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan sagittis a diam cras gravida. Adipiscing eget cursus amet velit.",
+//       date: "DECEMBER 13, 2021",
+//       img: "./images/blog/Rectangle 698.svg",
+//       id: 2,
+//     },
+//   ],
+//   Business: [
+//     {
+//       title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+//       body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan sagittis a diam cras gravida. Adipiscing eget cursus amet velit.",
+//       date: "DECEMBER 13, 2021",
+//       img: "./images/blog/Rectangle 699.svg",
+//       id: 3,
+//     },
+//   ],
+//   Products: [
+//     {
+//       title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+//       body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan sagittis a diam cras gravida. Adipiscing eget cursus amet velit.",
+//       date: "DECEMBER 13, 2021",
+//       img: "./images/blog/Rectangle 698.svg",
+//       id: 2,
+//     },
+//   ],
+//   Startup: [
+//     {
+//       title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+//       body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan sagittis a diam cras gravida. Adipiscing eget cursus amet velit.",
+//       date: "DECEMBER 13, 2021",
+//       img: "./images/blog/Rectangle 698.svg",
+//       id: 2,
+//     },
+//     {
+//       title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+//       body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan sagittis a diam cras gravida. Adipiscing eget cursus amet velit.",
+//       date: "DECEMBER 13, 2021",
+//       img: "./images/blog/Rectangle 699.svg",
+//       id: 3,
+//     },
+//   ],
+// });

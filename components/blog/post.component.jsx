@@ -2,23 +2,19 @@ import Link from "next/link";
 import React from "react";
 // "./images/blog/Rectangle 688.svg"
 const Post = (post) => {
-  const {title,body,img,date} = post.post
+  const { title, body, img, date } = post.post;
+  // console.log(post.post);
   return (
     <article className="block md:grid grid-cols-2 my-10 md:my-0 md:mb-5">
       <div className="">
-        <img alt="" src={img} className="w-full" />
+        <img alt="" src="./images/blog/Rectangle 688.svg" className="w-full" />
       </div>
       <aside className="my-3 md:ml-5 md:my-0 flex justify-between flex-col">
         <div className="mb-2">
           <Link href={`/blog/${title}`}>
-          <h3 className="font-semibold text-lg">
-            {title}
-          </h3>
+            <h3 className="font-semibold text-lg">{title}</h3>
           </Link>
-          <p className="text-sm">
-            {body}
-            {body}
-          </p>
+          <p className="text-sm">{body.slice(0, 300)}</p>
         </div>
         <div className="my-2 flex justify-between items-center">
           <span className="uppercase inline-block text-[12px]">{date}</span>
