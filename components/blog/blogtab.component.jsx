@@ -10,12 +10,13 @@ function classNames(...classes) {
 
 export default function BlogTab({ categoriesTab, allBlogs }) {
   let [blogs] = useState(allBlogs);
+  // console.log(blogs);
   return (
     <div className="w-full px-2 ">
       <Tab.Group>
         <Tab.List className="flex space-x-1 rounded-xl ">
           {/* {Object.keys(categories).map((category,id) => ( */}
-          {blogs?.map((blog, id) => (
+          {categoriesTab?.map((blog, id) => (
             <Tab
               key={id}
               className={({ selected }) =>
@@ -28,7 +29,7 @@ export default function BlogTab({ categoriesTab, allBlogs }) {
                 )
               }
             >
-              {blog.name}
+              {blog}
             </Tab>
           ))}
         </Tab.List>

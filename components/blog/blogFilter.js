@@ -1,13 +1,15 @@
-export const sortBlogs = (blogs) => {
+export const sortBlogs = (blogs, blogCategories) => {
     const allBlogs = [];
 
     //create categories to tab
-    // const categories = blogs.map(blog => blog?.attributes.blog_category.data.attributes.title)
-    const categories = ['All', 'Business', 'Startup', 'Products']
+    const categories = blogCategories.map(blog => blog?.attributes.title)
+    // console.log(blogCategories)
+    // console.log(Bcategories)
+    // const categories = ['All', 'Business', 'Startup', 'Products']
 
     //create structure based off the blogs
     const blogCategory = blogs.map((blog, id) => blog.attributes && {
-        id: id,
+        id: blog?.id,
         category: blog?.attributes.blog_category.data.attributes.title,
         title: blog?.attributes.title,
         body: blog?.attributes.content,
@@ -18,16 +20,31 @@ export const sortBlogs = (blogs) => {
     //filter and create categories,which will be rendered.
     for (let i = 0; i < categories.length; i++) {
         const filtered = blogCategory.filter(blog => blog.category == categories[i])
-        allBlogs.push({
-            name: categories[i], value: filtered.length > 0 ? filtered : [{
-                id: 0,
-                category: categories[i],
-                title: 'No data',
-                body: 'No data',
-                date: 'No data',
-                img: 'No data'
-            }]
-        })
+
+        if (categories[i].toLowerCase() == 'All'.toLowerCase()) {
+
+            allBlogs.push(
+                {
+                    name: categories[i],
+                    value: blogCategory
+                }
+            )
+
+        } else {
+
+            allBlogs.push({
+                name: categories[i],
+                value: filtered.length > 0 ? filtered : [{
+                    id: -1,
+                    category: categories[i],
+                    title: 'No data',
+                    body: 'No data',
+                    date: 'No data',
+                    img: 'No data'
+                }]
+            })
+        }
+
     }
 
     allBlogs.push(blogCategory)
