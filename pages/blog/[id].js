@@ -43,7 +43,8 @@ export const getStaticProps = async (context) => {
 const BlogItem = ({ blog }) => {
     const { author, blog_category, image, title, content, createdAt, duration } = blog?.attributes
     const [text, setText] = useState([]);
-    console.log(blog)
+
+    console.log(image)
     useEffect(() => {
         formatText(content);
     }, [content]);
@@ -75,7 +76,7 @@ const BlogItem = ({ blog }) => {
                 <p>{author.data.attributes.name}</p>
             </aside>
             <aside className='my-8'>
-                <img src="/images/blog/blogitem.svg" alt=" " />
+                <img src={`/${image.data.attributes.url}`} alt={image.alternativeText} />
             </aside>
             {
                 text.map((txt, id) => (

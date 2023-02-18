@@ -8,8 +8,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function BlogTab({ categoriesTab, allBlogs }) {
-  let [blogs] = useState(allBlogs);
+export default function ErrorTab() {
+  const categoriesTab = ["All", "Business", "Startup", "Products"];
 
   return (
     <div className="w-full px-2 ">
@@ -33,15 +33,13 @@ export default function BlogTab({ categoriesTab, allBlogs }) {
           ))}
         </Tab.List>
         <Tab.Panels className="mt-2">
-          {blogs?.map((posts, id) => (
+          {categoriesTab.map((tab, id) => (
             <Tab.Panel
               key={id}
               className={classNames("rounded-xl bg-white md:p-3 my-8", "")}
             >
               <ul>
-                {posts.value?.map((post, id) => (
-                  <Post key={id} post={post} />
-                ))}
+                <li> Error</li>
               </ul>
             </Tab.Panel>
           ))}

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-// "./images/blog/Rectangle 688.svg"
 const Post = (post) => {
   const { title, body, img, date, id } = post.post;
   const [text, setText] = useState([]);
@@ -17,7 +16,10 @@ const Post = (post) => {
   };
 
   return (
-    <article className="block md:grid grid-cols-2 my-10 md:my-0 md:mb-5">
+    <article
+      className="block md:grid grid-cols-2 my-10 md:my-0 md:mb-5"
+      key={id}
+    >
       <div className="">
         <img alt="" src="./images/blog/Rectangle 688.svg" className="w-full" />
       </div>
