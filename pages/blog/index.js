@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Jumbotron from '../../components/jumbotron'
 import Subscribe from '../../components/blog/subscribe.component'
@@ -49,9 +49,12 @@ const Blog = ({ blogs, blogCategories, error, message }) => {
   const [toolTip, setToolTip] = useState(error)
   const { allBlogs, categories } = sortBlogs(blogs, blogCategories)
 
+
   setTimeout(() => {
-    setToolTip(previous => !previous)
+    error && setToolTip(previous => !previous)
   }, 4000);
+
+
 
   return (
     <>
