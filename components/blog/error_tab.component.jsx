@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import blogpostData from "./fakepost";
 import Post from "./post.component";
+import styles from "../../styles/skeleton.module.css";
+import BlogError from "../skeleton/blog.component";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -39,7 +41,9 @@ export default function ErrorTab() {
               className={classNames("rounded-xl bg-white md:p-3 my-8", "")}
             >
               <ul>
-                <li> Error</li>
+                <li>
+                  <BlogError />
+                </li>
               </ul>
             </Tab.Panel>
           ))}

@@ -1,11 +1,9 @@
-export const sortBlogs = (blogs, blogCategories) => {
+export const sortBlogs = (blogs = [], blogCategories = []) => {
     const allBlogs = [];
 
     //create categories to tab
     const categories = blogCategories.map(blog => blog?.attributes.title)
-    // console.log(blogCategories)
-    // console.log(Bcategories)
-    // const categories = ['All', 'Business', 'Startup', 'Products']
+
 
     //create structure based off the blogs
     const blogCategory = blogs.map((blog, id) => blog.attributes && {

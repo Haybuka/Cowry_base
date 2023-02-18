@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import blogpostData from "./fakepost";
 import Post from "./post.component";
+import BlogError from "../skeleton/blog.component";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
