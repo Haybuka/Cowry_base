@@ -49,7 +49,6 @@ const Blog = ({ blogs, blogCategories, error, message }) => {
   const [toolTip, setToolTip] = useState(error)
   const { allBlogs, categories } = sortBlogs(blogs, blogCategories)
 
-
   setTimeout(() => {
     error && setToolTip(previous => !previous)
   }, 4000);
@@ -72,7 +71,7 @@ const Blog = ({ blogs, blogCategories, error, message }) => {
           <Subscribe />
         </aside>
         {
-          toolTip && <p className='fixed top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 bg-white px-4 py-3 rounded-lg shadow-lg tracking-widest'> you are currently <span className='text-red-500'>offline</span></p>
+          toolTip && <p className='fixed top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 bg-white px-4 py-3 rounded-lg shadow-lg tracking-widest w-3/4'> you are currently <span className='text-red-500'>offline</span></p>
         }
       </section>
     </>

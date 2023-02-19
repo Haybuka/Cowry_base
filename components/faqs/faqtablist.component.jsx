@@ -21,7 +21,7 @@ const TabList = ({ posts }) => {
           }
         >
           <span className="inline-block w-[180px] md:w-auto mx-auto">
-          {category.labels}
+            {category.labels}
           </span>
         </Tab>
       ))}
