@@ -38,7 +38,7 @@ export default function Home({ testimony = [], error = false }) {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Home | Cowry</title>
       </Head>
       <Banner />
       <Stat />

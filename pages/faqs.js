@@ -64,7 +64,7 @@ const Faqs = ({ faqs = [], error }) => {
 
 
 
-  console.log(faqPost)
+
   // Refactor using the line below
   // faqPosts.find( post => post?.labels === 'General Questions' ? post?.posts.push('hello') : faqPosts.push({id:4,labels:'Affirmation',posts:[]})); 
 
@@ -73,7 +73,7 @@ const Faqs = ({ faqs = [], error }) => {
   return (
     <>
       <Head>
-        <title>Faqs</title>
+        <title>Faqs | Cowry</title>
       </Head>
       <main>
         <Jumbotron text="FAQs" />

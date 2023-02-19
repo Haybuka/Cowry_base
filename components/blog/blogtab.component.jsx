@@ -33,7 +33,7 @@ export default function BlogTab({ categoriesTab, allBlogs }) {
             </Tab>
           ))}
         </Tab.List>
-        <Tab.Panels className="mt-2">
+        <Tab.Panels className="mt-2 lg:h-[530px] lg:overflow-y-scroll blog_panel">
           {blogs?.map((posts, id) => (
             <Tab.Panel
               key={id}

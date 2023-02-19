@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import BlogError from "../skeleton/blog.component";
+import ErrorTab from "./error_tab.component";
 const Post = (post) => {
   const { title, body, img, date, id } = post.post;
   const [text, setText] = useState([]);
@@ -11,11 +13,13 @@ const Post = (post) => {
   const formatText = (body) => {
     const texts = body.split(">");
     setText(
-      texts.map((txt) => (txt.length > 150 ? `${txt.slice(0, 100)}...` : txt))
+      texts.map((txt) => (txt.length > 150 ? `${txt.slice(0, 60)}...` : txt))
     );
   };
 
-  return (
+  return title.toLowerCase() === "no data" ? (
+    <BlogError />
+  ) : (
     <article
       className="block md:grid grid-cols-2 my-10 md:my-0 md:mb-5"
       key={id}

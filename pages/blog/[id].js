@@ -60,17 +60,17 @@ const BlogItem = ({ blog }) => {
     }, [content]);
 
     const formatText = (body) => {
-        const texts = body.split(">");
+        const texts = body?.split(">");
         setText(texts);
     };
 
     return (
         <section className='px-4 md:px-[60px] lg:px-[100px] py-6'>
-            <p className=' text-base_highlight'>{blog_category?.data.attributes.title}</p>
+            <p className=' text-base_highlight'>{blog_category?.data?.attributes?.title}</p>
             <h3 className='text-lg leading-6 my-2 font-semibold tracking-wider lg:text-3xl'>{title}</h3>
             <p className='text-sm text-gray-300 flex '>
                 <span className='mr-3 inline-block'>
-                    {createdAt.split("T")[0]} •
+                    {createdAt?.split("T")[0]} •
 
                 </span>
                 <span>
@@ -83,10 +83,10 @@ const BlogItem = ({ blog }) => {
                 <div className='rounded-full h-8 w-8 md:h-10 md:w-10 bg-gray-300 mr-4'>
 
                 </div>
-                <p>{author.data.attributes.name}</p>
+                <p>{author?.data?.attributes?.name}</p>
             </aside>
             <aside className='my-8'>
-                <img src={`/${image.data.attributes.url}`} alt={image.alternativeText} />
+                <img src={`/${image?.data?.attributes?.url}`} alt={image?.alternativeText} />
             </aside>
             <>
                 {
